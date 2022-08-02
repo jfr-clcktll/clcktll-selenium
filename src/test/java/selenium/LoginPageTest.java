@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,13 +20,19 @@ public class LoginPageTest {
 
     public WebDriver driver;
 
+    // SAUCE DEMO PARAMETERS
     public By usernameField = By.xpath("//*[@id=\"user-name\"]");
     public By passwordField = By.xpath("//*[@id=\"password\"]");
     public By submitBtn = By.xpath("//*[@id=\"login-button\"]");
 
+    // WAY 2 AUTOMATE PARAMETERS
     public By customerLoginField = By.xpath("/html/body/div[3]/div/div[2]/div/div[1]/div[1]/button");
     public By yourNameField = By.xpath("//*[@id=\"userSelect\"]");
     public By loginBtn = By.xpath("/html/body/div[3]/div/div[2]/div/form/button");
+    public By depositBtn = By.xpath("/html/body/div[3]/div/div[2]/div/div[3]/button[2]");
+    public By depositAmount = By.xpath("/html/body/div[3]/div/div[2]/div/div[4]/div/form/div/input");
+    public By depositSubmitBtn = By.xpath("/html/body/div[3]/div/div[2]/div/div[4]/div/form/button");
+    public By balanceAmount = By.xpath("/html/body/div[3]/div/div[2]/div/div[2]/strong[2]");
 
     @BeforeMethod
     public void setupBrowser() throws InterruptedException{
@@ -59,10 +67,27 @@ public class LoginPageTest {
 
         findOne(customerLoginField).click();
         Thread.sleep(1000);
-        findOne(yourNameField).sendKeys("Harry Potter");
+
+        Select select = new Select(findOne(yourNameField));
+        select.selectByVisibleText("Harry Potter");
+        //findOne(yourNameField).sendKeys("Harry Potter"); # Alternate method to select Harry Potter value
         Thread.sleep(1000);
+
         findOne(loginBtn).click();
         Thread.sleep(DEFAULT_WAIT_TIME);
+
+        findOne(depositBtn).click();
+        Thread.sleep(DEFAULT_WAIT_TIME);
+
+        findOne(depositAmount).sendKeys("5000");
+        Thread.sleep(DEFAULT_WAIT_TIME);
+
+        findOne(depositSubmitBtn).click();
+        Thread.sleep(DEFAULT_WAIT_TIME);
+
+        //Assert.assertTrue(balanceAmount.equals("5000")); // Verify that element is displayed on page
+
+
 
     }
 
