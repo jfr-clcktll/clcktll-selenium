@@ -10,6 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import selenium.SeleniumCommandWrapper;
 
 
 public class LoginPageTest {
@@ -32,7 +33,7 @@ public class LoginPageTest {
     public By depositBtn = By.xpath("/html/body/div[3]/div/div[2]/div/div[3]/button[2]");
     public By depositAmount = By.xpath("/html/body/div[3]/div/div[2]/div/div[4]/div/form/div/input");
     public By depositSubmitBtn = By.xpath("/html/body/div[3]/div/div[2]/div/div[4]/div/form/button");
-    public By balanceAmount = By.xpath("/html/body/div[3]/div/div[2]/div/div[2]/strong[2]");
+    public By depositStatus = By.xpath("/html/body/div[3]/div/div[2]/div/div[4]/div/span");
 
     @BeforeMethod
     public void setupBrowser() throws InterruptedException{
@@ -85,9 +86,24 @@ public class LoginPageTest {
         findOne(depositSubmitBtn).click();
         Thread.sleep(DEFAULT_WAIT_TIME);
 
-        //Assert.assertTrue(balanceAmount.equals("5000")); // Verify that element is displayed on page
+        Assert.assertEquals(findOne(depositStatus).getText(),"Deposit Successful"); // Verify that element is displayed on page
 
+    }
 
+    // Same test as above but with the more efficient way of using Wrappers - 9 lines of code vs 25
+    @Test
+    public void verifyLoginWay2AutoWithWrapper(){
+
+        SeleniumCommandWrapper scw = new SeleniumCommandWrapper(driver);
+
+        scw.navigate(WEBLINK_W2A);
+        scw.click(customerLoginField);
+        scw.selectFromDropdown(yourNameField, "Harry Potter");
+        scw.click(loginBtn);
+        scw.click(depositBtn);
+        scw.sendKeys(depositAmount,"2500");
+        scw.click(depositSubmitBtn);
+        Assert.assertEquals(scw.getText(depositStatus), "Deposit Successful");
 
     }
 
