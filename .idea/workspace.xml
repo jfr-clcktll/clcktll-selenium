@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ace516d3-5fd3-4386-880d-7a2e942296b8" name="Changes" comment="Session 9 Making Pages and Models">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/BankingApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/models/Credentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/models/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/pages/AbstractPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/pages/AccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/webdriverexamples/WebDriverSetup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/selenium/SessionEightModelBasedTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/SauceLabsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/components/AbstractComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/components/InventoryItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/pages/SauceLabsLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/pages/SauceLabsProductPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/selenium/SauceLabsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/LoginPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/SeleniumCommandWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webdriverexamples/SeleniumCommandWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/applications/way2automate/models/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applications/way2automate/models/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/SessionEightModelBasedTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/SessionEightModelBasedTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,17 +40,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_directory_selection": "C:/Users/ali.jaffar/IdeaProjects/clickatell-selenium/src/test/java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/ali.jaffar/IdeaProjects/clickatell-selenium/src/test/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="applications.way2automate" />
@@ -216,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659506422291</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Session 9 Making Pages and Models">
+      <created>1659556962562</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659556962562</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -16,15 +16,15 @@ public class SessionEightModelBasedTests {
 
 
     @Test
-    public void verifyWay2AutoDeposit()  {
+    public void verifyWay2AutoDeposit() {
 
         BankingApplication bankingApp = new BankingApplication(driver);
 
         bankingApp.loginPage.login("Harry Potter");
-        boolean isDepositDone =bankingApp.accountPage.makeDeposit(1337,"1005");
+        boolean isDepositDone = bankingApp.accountPage.makeDeposit(1337, "1005");
         Assert.assertTrue(isDepositDone);
 
-        boolean isWithdrawalDone = bankingApp.accountPage.makeWithdrawal(37,"1005");
+        boolean isWithdrawalDone = bankingApp.accountPage.makeWithdrawal(37, "1005");
         Assert.assertTrue(isWithdrawalDone);
 
     }
